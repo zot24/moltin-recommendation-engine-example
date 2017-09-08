@@ -1,0 +1,3 @@
+#!/bin/bash
+
+http GET http://localhost:7070/events.json?accessKey=aFI4EfJJXc5W03ymMgqHWVAdV2VQN9ej5_WmMW_jWmMferm9n102SCQw0XYOXNsS

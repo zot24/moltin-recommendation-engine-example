@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hackaton Recommendation System</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>Your user ID is: {{ userId }}</p>
+            <div style="width: 50%; float:left" id="products">
+                <p>Products</p>
+                <ul>
+                    <li v-for="product in products">
+                        {{ product.id }}
+                        <button v-on:click="view(product.id)">View!</button>
+                        <button v-on:click="buy(product.id)">Buy!</button>
+                    </li>
+                </ul>
+            </div>
+            <div style="width: 50%; float:right" id="extra">
+                <div id="recommendations">
+                    <p>Recommended products</p>
+                    <ul>
+                        <li v-for="recommended in recommendations">
+                            {{ recommended.item }}
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div id="events">
+                    <p>Events</p>
+                    <ul>
+                        <li v-for="event in events" v-if="event.event == 'buy'">
+                            {{ event.entityId }}
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+        
+        <script src="https://unpkg.com/@moltin/sdk"></script>
+        <script src="https://unpkg.com/vue@2.4.2/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
